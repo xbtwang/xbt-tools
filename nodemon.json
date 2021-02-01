@@ -1,0 +1,12 @@
+{
+  "exec": "babel-node src/index.js",
+  "ignore": [
+    ".git",
+    "node_modules",
+    ".gitignore"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js, json"
+}

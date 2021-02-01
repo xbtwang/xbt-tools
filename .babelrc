@@ -1,0 +1,24 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "node": "13.12.0"
+      }
+    }],
+    ["minify", {
+      "mangle": true
+    }]
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "account": "./src/account",
+        "api": "./src/api",
+        "config": "./src/config",
+        "transaction": "./src/transaction",
+        "util": "./src/util"
+      }
+    }]
+  ]
+}
