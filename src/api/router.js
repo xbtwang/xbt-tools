@@ -15,6 +15,7 @@ const router = (app) => {
   app.post('/account/watch/send', AccountController.sendWatch)
   app.post('/transaction/generate', TransactionController.generate)
   app.post('/transaction/send', TransactionController.generateSend)
+  app.post('/transaction/get', TransactionController.get)
 }
 
 export default router
