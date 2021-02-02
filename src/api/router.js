@@ -16,6 +16,7 @@ const router = (app) => {
   app.post('/transaction/generate', TransactionController.generate)
   app.post('/transaction/send', TransactionController.generateSend)
   app.post('/transaction/get', TransactionController.get)
+  app.post('/transaction/log', TransactionController.log)
 }
 
 export default router

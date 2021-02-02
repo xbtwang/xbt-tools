@@ -67,5 +67,19 @@ class TransactionController {
     }
   }
 
+  async log(request, reply) {
+    try {
+      const hash = request.body.hash
+      const address = request.body.address
+      const res = await Transaction.log(hash, address)
+      return res
+    } catch (error) {
+      throw {
+        error: true,
+        message: error,
+      }
+    }
+  }
+
 }
 export default new TransactionController()

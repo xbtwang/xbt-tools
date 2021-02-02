@@ -124,6 +124,32 @@ class Transaction {
     }
   }
 
+  async log(hash, address) {
+    try {
+      const res = await axios({
+        method: 'post',
+        url: `${Config.data.open.host}/open/tx/log`,
+        timeout: 15000,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        data: {
+          hash,
+          address
+        },
+      })
+      if (res.status !== 200) {
+        throw '网络连接失败'
+      }
+      if (res.data.code !== 200) {
+        throw res.data.message
+      }
+      return res.data
+    } catch (error) {
+      throw error
+    }
+  }
+
 }
 
 export default new Transaction()
