@@ -78,7 +78,7 @@ class Transaction {
     try {
       const res = await axios({
         method: 'post',
-        url: `${Config.data.open.host}/open/tx`,
+        url: `${Config.data.open.host}/open/tx/send`,
         timeout: 15000,
         headers: {
           'Content-Type': 'application/json',
