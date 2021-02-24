@@ -45,7 +45,7 @@ class TransactionController {
       })
       await Transaction.verify(tx)
       const res = await Transaction.send(tx)
-      return res
+      return {...res, tx}
     } catch (error) {
       throw {
         error: true,
@@ -80,6 +80,5 @@ class TransactionController {
       }
     }
   }
-
 }
 export default new TransactionController()
