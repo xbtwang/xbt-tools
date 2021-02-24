@@ -43,6 +43,7 @@ module.exports = {
                 'alias': {
                   'account': './src/account',
                   'api': './src/api',
+                  'block': './src/block',
                   'config': './src/config',
                   'transaction': './src/transaction',
                   'util': './src/util'

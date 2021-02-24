@@ -2,7 +2,7 @@
   "presets": [
     ["@babel/preset-env", {
       "targets": {
-        "node": "13.12.0"
+        "node": "14.15.4"
       }
     }],
     ["minify", {
@@ -15,6 +15,7 @@
       "alias": {
         "account": "./src/account",
         "api": "./src/api",
+        "block": "./src/block",
         "config": "./src/config",
         "transaction": "./src/transaction",
         "util": "./src/util"
