@@ -4,6 +4,7 @@ import TransactionController from './controller/transaction'
 
 const router = (app) => {
   app.post('/account/generate', AccountController.generate)
+  app.post('/account/address/check', AccountController.checkAddress)
   app.post('/account/address/public', AccountController.generateAddressByPublic)
   app.post(
     '/account/address/signature',
