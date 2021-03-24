@@ -19,6 +19,7 @@ const router = (app) => {
   app.post('/block/range', BlockController.range)
   app.post('/transaction/generate', TransactionController.generate)
   app.post('/transaction/send', TransactionController.generateSend)
+  app.post('/transaction/emit', TransactionController.emit)
   app.post('/transaction/get', TransactionController.get)
   app.post('/transaction/log', TransactionController.log)
 }

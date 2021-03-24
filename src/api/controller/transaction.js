@@ -54,6 +54,20 @@ class TransactionController {
     }
   }
 
+  async emit(request, reply) {
+    try {
+      const tx = request.body.tx
+      await Transaction.verify(tx)
+      const res = await Transaction.send(tx)
+      return {...res, tx}
+    } catch (error) {
+      throw {
+        error: true,
+        message: error,
+      }
+    }
+  }
+
   async get(request, reply) {
     try {
       const hash = request.body.hash
