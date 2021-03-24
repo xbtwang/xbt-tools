@@ -2,7 +2,7 @@
   "presets": [
     ["@babel/preset-env", {
       "targets": {
-        "node": "14.15.4"
+        "node": "14.16.0"
       }
     }],
     ["minify", {
